@@ -1,5 +1,4 @@
 const container = document.querySelector(".container");
-
 const resize = document.querySelector("#resize");
 
 makeGrid(16, 16);
@@ -30,14 +29,12 @@ function resizeGrid(){
 
 function draw(){
     const dots = document.querySelectorAll(".grid-dot");
-
     dots.forEach(dot => {
         dot.addEventListener("mouseover", function(){
             dot.classList.add("draw");
         })
     })
 }
-
 
 resize.addEventListener("click", resizeGrid);
 
