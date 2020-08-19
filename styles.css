@@ -12,14 +12,16 @@
 
 body {
     background: #E00313;
-    /* background: url(images/22ETCH-jumbo.jpg) center/50% no-repeat; */
+    font-family: Pacifico, cursive;
+    font-size: 1.5rem;
+    color: #333;
 }
 
 h1 {
     font-size: 3rem;
     text-align: center;
     font-family: Pacifico, cursive;
-    color: var(--pen-color);
+    color: #333;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
 }
 
@@ -44,4 +46,9 @@ h1 {
 
 .draw {
     background-color: var(--pen-color);
+}
+
+input[type="color"]{
+    width: 200px;
+    height: 100px;
 }

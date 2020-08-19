@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 const resize = document.querySelector("#resize");
-
+const color = document.querySelector("#color");
 
 makeGrid(16, 16);
 draw();
@@ -37,7 +37,11 @@ function draw(){
     })
 }
 
-resize.addEventListener("click", resizeGrid);
+function changeColor(){
+    document.documentElement.style.setProperty("--pen-color", this.value);
+}
 
+resize.addEventListener("click", resizeGrid);
+color.addEventListener("change", changeColor);
 
 
