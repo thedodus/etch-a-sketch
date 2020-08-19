@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const resize = document.querySelector("#resize");
+const random = document.querySelector("#random");
 
 makeGrid(16, 16);
 draw();
@@ -36,6 +37,21 @@ function draw(){
     })
 }
 
+function colorDraw(){
+    const dots = document.querySelectorAll(".grid-dot");
+    dots.forEach(dot => {
+        dot.addEventListener("mouseover", function(){
+            dot.style.backgroundColor = getRandomColor();
+        })
+    })
+}
+
+function getRandomColor(){
+    const randomRGB = () => Math.floor(Math.random() * 256);
+    return `rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`;
+}
+
 resize.addEventListener("click", resizeGrid);
+random.addEventListener("click", colorDraw);
 
 

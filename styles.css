@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+body {
+
+}
+
 h1 {
     font-size: 3rem;
     text-align: center;
@@ -26,6 +30,8 @@ h1 {
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     grid-gap: 0;
+    background-color: #fff;
+    box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, .5);
 }
 
 .grid-dot {
