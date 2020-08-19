@@ -13,8 +13,9 @@
 body {
     background: #E00313;
     font-family: Pacifico, cursive;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     color: #333;
+    position: relative;
 }
 
 h1 {
@@ -23,6 +24,17 @@ h1 {
     font-family: Pacifico, cursive;
     color: #333;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+}
+
+.grow {
+    flex: 1;
 }
 
 .container {
@@ -37,6 +49,7 @@ h1 {
     grid-gap: 0;
     background-color: #fff;
     box-shadow: inset 1px 1px 20px 10px rgba(0, 0, 0, .25);
+    margin-bottom: 15px;
 }
 
 .grid-dot {
@@ -48,7 +61,31 @@ h1 {
     background-color: var(--pen-color);
 }
 
-input[type="color"]{
-    width: 200px;
+label {
+    display: inline-block;
+    width: 100px;
     height: 100px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, .25);
+    padding: 10px;
+}
+
+label[for="resize"]{
+    position: absolute;
+    left: 32%;
+    padding: 20px;
+    bottom: 0%;
+}
+
+label[for="color"]{
+    position: absolute;
+    right: 32%;
+    bottom: 0%;
+}
+
+button, 
+input[type="color"]{
+    opacity: 0;
 }
